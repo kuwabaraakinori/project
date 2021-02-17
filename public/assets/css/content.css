@@ -1,0 +1,38 @@
+.container{
+    margin:0 auto;
+}
+.content{
+    padding: 0px;
+    text-align: center;
+}
+p{
+    font-size: 26px;
+    font-family: serif;
+    color:black;
+}
+
+
+
+.rounded-pill{
+    /*background-color: wheat;*/
+}
+    
+
+.col-sm{
+    margin-top: 25px;
+    text-align:center;
+}
+/*.rounded-circle{
+
+}*/
+/*ここまでがtask_count*/
+
+.container{
+    margin:0 auto;
+}
+.align-self-center{
+    background-color: whitesmoke;
+}
+.card{
+   margin: 15px 10px 30px 10px;
+}
