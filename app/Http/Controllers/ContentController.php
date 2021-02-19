@@ -44,9 +44,7 @@ class ContentController extends Controller
         $content->span = $request->span;
         $content->content = $request->content;
         $content->store();
-
-        dd($content);
-
+        
         return redirect('/');
     }
 

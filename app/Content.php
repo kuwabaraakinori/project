@@ -8,10 +8,8 @@ class Content extends Model
 {
     public function content()
     {
-        
+       return $this->belongsTo(User::class);
     }
 
-    public function user(){
-        
-    }
+   protected $fillable = ['span' , 'title' , 'content'];
 }
