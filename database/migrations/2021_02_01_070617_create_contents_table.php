@@ -6,11 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateContentsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('contents', function (Blueprint $table) {
@@ -19,16 +14,16 @@ class CreateContentsTable extends Migration
             $table->string('content');
             $table->integer('span');
             $table->timestamps();
+
+            //外部キー設定
+            $table->foreign('user_id')->reference('id')->on('users');
         });
     }
-
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('contents');
     }
+
+
+    
 }

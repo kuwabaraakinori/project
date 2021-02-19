@@ -5,7 +5,7 @@
     <p><h3 style="text-align: center;">新規投稿</h3></p>
   </div>
   <div class="col-sm8">
-    <form action="{{route('content.store')}}" method="post">
+    <form action="{{route('content.store')}}" method="POST">
       @csrf
       <div class="form-group">
         <label for="text1">Title</label>

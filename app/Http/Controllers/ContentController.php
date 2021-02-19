@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Content;
+use App\Http\Requests\ContentRequest;
 use Illuminate\Auth\Events\Validated;
 
 class ContentController extends Controller
@@ -31,21 +32,26 @@ class ContentController extends Controller
 
 
 
-    public function store(Request $request)
+    public function store(ContentRequest $request)
     {
+        /*
        $request->validate([
             'title' => 'required',
             'span' => 'required',
             'content' => 'required|max:225'
         ]);
+        */
+        dd($request);
+        if($request->validated()){
+            $content = new Content;
 
-        $content = new Content;
-        $content->title = $request->title;
-        $content->span = $request->span;
-        $content->content = $request->content;
-        $content->store();
-        
-        return redirect('/');
+            $content->title = $request->title;
+            $content->span = $request->span;
+            $content->content = $request->content;
+            $content->store();
+            
+            return redirect('/');
+        }
     }
 
     
@@ -53,25 +59,17 @@ class ContentController extends Controller
 
     public function show($id)
     {
-        //
+        
     }
-
-    
-
-
 
     public function edit($id)
     {
-        //
+        
     }
-
-    
-
-
 
     public function update(Request $request, $id)
     {
-        //
+        
     }
 
     
