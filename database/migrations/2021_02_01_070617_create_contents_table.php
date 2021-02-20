@@ -10,6 +10,7 @@ class CreateContentsTable extends Migration
     {
         Schema::create('contents', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('user_id');
             $table->string('title');
             $table->string('content');
             $table->integer('span');
@@ -24,6 +25,4 @@ class CreateContentsTable extends Migration
         Schema::dropIfExists('contents');
     }
 
-
-    
 }

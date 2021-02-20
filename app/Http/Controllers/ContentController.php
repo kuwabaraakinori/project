@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Content;
 use App\Http\Requests\ContentRequest;
-use Illuminate\Auth\Events\Validated;
+//use Illuminate\Auth\Events\Validated;
 
 class ContentController extends Controller
 {
@@ -34,14 +34,6 @@ class ContentController extends Controller
 
     public function store(ContentRequest $request)
     {
-        /*
-       $request->validate([
-            'title' => 'required',
-            'span' => 'required',
-            'content' => 'required|max:225'
-        ]);
-        */
-        dd($request);
         if($request->validated()){
             $content = new Content;
 
@@ -49,9 +41,10 @@ class ContentController extends Controller
             $content->span = $request->span;
             $content->content = $request->content;
             $content->store();
-            
-            return redirect('/');
+            /*dd($content);*/
         }
+
+        return redirect('/');
     }
 
     
@@ -59,7 +52,12 @@ class ContentController extends Controller
 
     public function show($id)
     {
-        
+        $content = Content::findOrFail($id);
+
+        return view('contents.show' , [
+            'contents' => $content
+        ]);
+
     }
 
     public function edit($id)

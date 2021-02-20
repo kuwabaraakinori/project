@@ -23,23 +23,13 @@ class RouteServiceProvider extends ServiceProvider
      */
     public const HOME = '/';
 
-    /**
-     * Define your route model bindings, pattern filters, etc.
-     *
-     * @return void
-     */
     public function boot()
     {
-        //
+        
 
         parent::boot();
     }
 
-    /**
-     * Define the routes for the application.
-     *
-     * @return void
-     */
     public function map()
     {
         $this->mapApiRoutes();
