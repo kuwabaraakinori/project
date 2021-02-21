@@ -4,6 +4,7 @@
   <p style="text-align: center; font-size:32px;">ログイン</p>
 </div>
 <form action="{{route('login.post')}}" method="post">
+  @csrf
     <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" value="{{old('email')}}">

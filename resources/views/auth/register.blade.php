@@ -13,7 +13,6 @@
     <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" value="{{old('email')}}">
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Password</label>
@@ -23,6 +22,6 @@
       <label for="exampleInputPassword1">Password Confirm</label>
       <input type="password" class="form-control" id='exampleInputPassword1' placeholder="Password Confirm" name="password_confirmation">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">新規登録</button>
 </form>
 @endsection

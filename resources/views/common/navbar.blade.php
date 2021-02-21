@@ -17,7 +17,6 @@
                   <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                     <button class="dropdown-item" type="button"><a href="{{route('signup.get')}}">新規登録</a></button>
                     <button class="dropdown-item" type="button"><a href="{{route('login')}}">ログイン</a></button>
-                    {{--<button class="dropdown-item" type="button"><a href="{{route('content.create')}}">新規投稿</a></button>--}}
                   </div>
                 @endif
               </div>
