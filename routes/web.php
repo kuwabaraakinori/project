@@ -32,3 +32,6 @@ Route::group(['middleware' => ['auth']],function () {
     Route::resource('user', 'UserController' , ['only' =>'index' , 'show']);
     Route::resource('content', 'ContentController' , ['except' => 'index']);
 });
+
+
+
