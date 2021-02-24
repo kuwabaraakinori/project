@@ -20,9 +20,7 @@
         @include('common.navbar')
         
         <div class="container">
-           {{-- エラーメッセージ --}}
-            {{--{@include('common.error_message')--}} 
-
+            @include('common.error_message')
 
             @yield('content')
         </div>

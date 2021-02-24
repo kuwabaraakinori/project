@@ -5,10 +5,9 @@
   </div>
   <form action="{{route('signup.post')}}" method="post">
     @csrf
-    <div class="form-group">
-        <label for="exampleInputEmail1">Name</label>
-        <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name" name="myname" value="{{old('myname')}}">
-        <small id="emailHelp" class="form-text text-muted">Please write down your name</small>
+      <div class="form-group">
+        <label for="exampleInputName">Name</label>
+        <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name" name="name" value="{{old('myname')}}">
       </div>
       <div class="form-group">
         <label for="exampleInputEmail1">Email address</label>

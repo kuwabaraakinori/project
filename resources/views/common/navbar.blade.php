@@ -10,8 +10,9 @@
                 </button>
                 @if (Auth::check())
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <p>{{Auth::user()->name}}</p>
+                  <a href="{{route('user.index')}}">{{Auth::user()->name}}</a>
                     <button class="dropdown-item" type="button"><a href="{{route('content.create')}}">新規投稿</a></button>
+                    <button class="dropdown-item" type="button"><a href="{{route('logout')}}">ログアウト</a></button>
                 </div>
                 @else
                   <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
