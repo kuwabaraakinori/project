@@ -12,7 +12,7 @@
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"  name="password">
     </div>
     <p class="mt-2"><a href="{{route('signup.get')}}">New User? Please click this.</a></p>
     <button type="submit" class="btn btn-primary">Submit</button>

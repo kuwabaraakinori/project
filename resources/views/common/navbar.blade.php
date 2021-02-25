@@ -10,7 +10,9 @@
                 </button>
                 @if (Auth::check())
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                  <a href="{{route('user.index')}}">{{Auth::user()->name}}</a>
+                    {{--<a href="{{route('user.show' ,['user' => Auth::id()])}}" style="text-align: center;">{{Auth::user()->name}}</a>--}}
+                    <button class="dropdown-item" type="button">{{Auth::user()->name}}</button>
+                    <button class="dropdown-item" type="button"><a href="{{route('user.index')}}">ユーザー一覧</a></button>
                     <button class="dropdown-item" type="button"><a href="{{route('content.create')}}">新規投稿</a></button>
                     <button class="dropdown-item" type="button"><a href="{{route('logout')}}">ログアウト</a></button>
                 </div>

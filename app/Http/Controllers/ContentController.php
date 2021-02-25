@@ -13,11 +13,9 @@ class ContentController extends Controller
     
     public function index()
     {
-        //$contents = new Content;
-        $contents=Content::all();
-
-        return view('contents.content' , [
-            'contents'=>$contents,
+        $contents = Content::all();
+        return view("welcome" , [
+            "contents" => $contents,
         ]);
     }
 
@@ -36,12 +34,14 @@ class ContentController extends Controller
     {
         if($request->validated()){
             $content = new Content;
-
+            $content->user_id = $request->user_id;
             $content->title = $request->title;
             $content->span = $request->span;
             $content->content = $request->content;
-            $content->store();
+
             /*dd($content);*/
+            $content->save();
+            
         }
 
         return redirect('/');
@@ -52,10 +52,10 @@ class ContentController extends Controller
 
     public function show($id)
     {
-        $content = Content::findOrFail($id);
+        $contents = Content::findOrFail($id);
 
         return view('contents.show' , [
-            'contents' => $content
+            'contents' => $contents
         ]);
 
     }
