@@ -3,6 +3,7 @@
    <div class="user_name">
          <p>{{Auth::user()->name}}</p>
    </div>
+   {{Auth::check()}}
    <div class="container">
         @foreach ($users as $user)
         <div class="users_index">

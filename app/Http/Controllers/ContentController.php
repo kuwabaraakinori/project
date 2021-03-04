@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\User;
 use App\Content;
 use App\Http\Requests\ContentRequest;
 //use Illuminate\Auth\Events\Validated;
@@ -14,11 +15,13 @@ class ContentController extends Controller
     public function index()
     {
         $contents = Content::all();
+        
+        $contents->loadRelationshipCounts();
+        
         return view("welcome" , [
-            "contents" => $contents,
-        ]);
+            "contents" => $contents
+            ]);
     }
-
 
 
     public function create()
@@ -75,6 +78,8 @@ class ContentController extends Controller
 
     public function destroy($id)
     {
-        //
+        if(Auth::check()){
+
+        };
     }
 }

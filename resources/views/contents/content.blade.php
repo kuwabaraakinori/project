@@ -24,7 +24,7 @@
                 </div>
             </div>
         </div>
-        @if (count($contents)>0)
+        @if(count(array($contents))>0)
             @foreach ($contents as $content)
                 <div class="container">
                     <div class="align-self-center">
